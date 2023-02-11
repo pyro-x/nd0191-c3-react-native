@@ -23,7 +23,7 @@ const initialState = {
 
 
 const reducers = {
-    createCustomer: (state, action) => {
+    createCustomer: (state) => {
         state.create.status = status.PENDING;
     },
     createCustomerResult: (state, action) => {

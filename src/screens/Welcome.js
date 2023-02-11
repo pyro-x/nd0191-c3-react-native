@@ -2,7 +2,7 @@ import Welcome from "../features/Welcome";
 import { SafeAreaView, ScrollView } from "react-native";
 
 
-const Welcome = () => {
+const WelcomeScreen = () => {
     return (
         <SafeAreaView>
             <ScrollView>
@@ -14,4 +14,4 @@ const Welcome = () => {
 };
 
 
-export default Welcome;
+export default WelcomeScreen;

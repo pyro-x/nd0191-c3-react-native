@@ -8,6 +8,7 @@ import CustomerList from "../screens/customers/List";
 
 import RegionList from "../screens/regions/List";
 import RegionCustomers from "../screens/regions/Customers";
+import WelcomeScreen from "../screens/Welcome";
 
 
 
@@ -33,7 +34,8 @@ const Navigation = () => {
 
     const RegionStackScreen = () => {
         return (
-            <RegionStack.Navigator initialRouteName='List'>
+            <RegionStack.Navigator>
+
                 <RegionStack.Screen
                     name='List'
                     component={RegionList}
@@ -49,7 +51,11 @@ const Navigation = () => {
     return (
         <NavigationContainer>
             <MainStack.Navigator 
-                initialRouteName='Regions'>
+                initialRouteName='Welcome'>
+                <MainStack.Screen
+                    name='Welcome'
+                    component={WelcomeScreen}
+                />
                 <MainStack.Screen 
                     name='Customers'
                     component={CustomerStackScreen} 
