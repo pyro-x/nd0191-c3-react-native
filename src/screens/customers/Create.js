@@ -1,12 +1,10 @@
-import Welcome from "../features/Welcome";
 import { SafeAreaView, ScrollView } from "react-native";
-
-
-const Welcome = () => {
+import CustomerCreate from "../../features/customers/Create";
+const Create = () => {
     return (
         <SafeAreaView>
             <ScrollView>
-                <Welcome/>
+                <CustomerCreate/>
             </ScrollView>
         </SafeAreaView>
 
@@ -14,4 +12,4 @@ const Welcome = () => {
 };
 
 
-export default Welcome;
+export default Create;

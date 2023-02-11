@@ -1,17 +1,16 @@
-import Welcome from "../features/Welcome";
 import { SafeAreaView, ScrollView } from "react-native";
 
+import RegionList from "../../features/regions/List";
 
-const Welcome = () => {
+const List = () => {
     return (
         <SafeAreaView>
             <ScrollView>
-                <Welcome/>
+                <RegionList/>
             </ScrollView>
         </SafeAreaView>
 
     );
-};
+}
 
-
-export default Welcome;
+export default List;
