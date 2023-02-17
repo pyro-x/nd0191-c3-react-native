@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native'
-const styleFn = (disabled, reverse) => {
+const styleFn = () => {
     return StyleSheet.create({
         container: {
             flex: 1,
-            justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: '#F5FCFF',
+            justifyContent: 'space-between',
         },
         welcome: {
             fontSize: 20,

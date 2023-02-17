@@ -1,5 +1,5 @@
 import { all, put, select, takeLatest, delay} from 'redux-saga/effects';
-import * as actions from '../reducers';
+import * as actions from '../reducers.js';
 
 import * as services from '../services';
 

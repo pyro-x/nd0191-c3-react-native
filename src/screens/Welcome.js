@@ -9,7 +9,6 @@ const WelcomeScreen = () => {
                 <Welcome/>
             </ScrollView>
         </SafeAreaView>
-
     );
 };
 

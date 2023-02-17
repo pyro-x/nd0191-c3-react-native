@@ -41,7 +41,7 @@ const Navigation = () => {
                     component={RegionList}
                 />
                 <RegionStack.Screen    
-                    name='CustomersList'
+                    name='Customersr'
                     component={RegionCustomers}
                 />
             </RegionStack.Navigator>
