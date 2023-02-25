@@ -28,10 +28,10 @@ export const useUpdateFields = () => {
     }
   }
 
-  export const useEditCustomer = () => {
+  export const useEditCustomer = ({id}) => {
     const dispatch = useDispatch()
     return {
-      onSubmit: () => dispatch(actions.editCustomer())
+      onSubmit: () => dispatch(actions.editCustomer({id}))
     }
   }
   export const useListCustomers = () => {

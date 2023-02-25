@@ -15,7 +15,7 @@ const CustomerEdit = () => {
     const { customerId } = route.params;
     console.log (':customer id:', customerId)
 
-    const { onSubmit } = useEditCustomer(customerId)
+    const { onSubmit } = useEditCustomer({id: customerId});
     
     return (<CustomerForm onSubmit={onSubmit} customerId={customerId}/>
     );

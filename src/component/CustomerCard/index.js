@@ -1,10 +1,14 @@
 import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useSelector } from 'react-redux';
 
 import styles from './styles';
 
 const CustomerCard = ({ customer, onPress }) => {
-  const { name, surname, email, id } = customer;
+  const { name, surname, email, region, id } = customer;
+
+  const regionName = useSelector((state) => state.regions.list.regions.find((reg) => reg.id === region)?.name) || 'No region';
+
 
   return (
     <View
@@ -41,6 +45,14 @@ const CustomerCard = ({ customer, onPress }) => {
         </View>
         <View style={styles.hCardText}>
             <Text style={styles.value}>{email}</Text>
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View style={styles.hCardLabel}>
+            <Text style={styles.label}>Region</Text>
+        </View>
+        <View style={styles.hCardText}>
+            <Text style={styles.value}>{regionName}</Text>
         </View>
       </View>
       </TouchableOpacity>
