@@ -32,7 +32,6 @@ const CustomerForm = ({onSubmit, customerId}) => {
 
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
-//    const [items, setItems] = useState([]);
 
     const items = useMemo(() => regions.map((region) => ({label: region.name, value: region.id})), [regions]);
     
@@ -66,8 +65,7 @@ const CustomerForm = ({onSubmit, customerId}) => {
     return (
     loading ? <Text>Loading...</Text> :
   <View style={styles.container}>
-    <Text>Customer Form</Text>
-    <View styles={styles.formContainer}>
+    <View style={styles.formContainer}>
       <View style={styles.row}>
         <Text style={styles.label}>Name</Text>
         <TextInput
@@ -116,8 +114,8 @@ const CustomerForm = ({onSubmit, customerId}) => {
           />
       </View>
     </View>
-    <View>
-    <Button style={styles.button} onPress={() => {
+    <View style={styles.button}>
+    <Button onPress={() => {
                     onSubmit();
                     resetForm();
                 }} title="Submit"/>
