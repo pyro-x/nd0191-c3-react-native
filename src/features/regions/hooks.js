@@ -13,9 +13,10 @@ export function useListRegions() {
     const loading = useSelector((state) => state.regions.loading);
     const error = useSelector((state) => state.regions.error);
   
-    console.log ('regionsList:', regionsList);
     useEffect(() => {
-        dispatch(actions.loadRegions())
+        if (!regionsList || regionsList.length === 0) {
+            dispatch(actions.loadRegions())
+        }
     }, [dispatch])
 
     return {

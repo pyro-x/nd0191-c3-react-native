@@ -4,6 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
  
 
 import CustomerCreate from "../screens/customers/Create";
+import CustomerView from "../screens/customers/View";
+import CustomerEdit from "../screens/customers/Edit";
 import CustomerList from "../screens/customers/List";
 
 import RegionList from "../screens/regions/List";
@@ -18,35 +20,6 @@ const Navigation = () => {
     const RegionStack = createStackNavigator();
 
     const MainStack = createStackNavigator();
-    const CustomerStackScreen = () => {
-        return (
-            <CustomerStack.Navigator>
-                 <CustomerStack.Screen
-                    name='New'
-                    component={CustomerCreate}
-                />
-                <CustomerStack.Screen
-                    name='List'
-                    component={CustomerList}
-                />
-            </CustomerStack.Navigator> )
-    };
-
-    const RegionStackScreen = () => {
-        return (
-            <RegionStack.Navigator>
-
-                <RegionStack.Screen
-                    name='List'
-                    component={RegionList}
-                />
-                <RegionStack.Screen    
-                    name='Customersr'
-                    component={RegionCustomers}
-                />
-            </RegionStack.Navigator>
-        )};
-
 
     return (
         <NavigationContainer>
@@ -56,13 +29,41 @@ const Navigation = () => {
                     name='Welcome'
                     component={WelcomeScreen}
                 />
-                <MainStack.Screen 
-                    name='Customers'
-                    component={CustomerStackScreen} 
+                <MainStack.Screen
+                    name='CustomerCreate'
+                    options={{
+                        title: 'New customer'
+                    }}
+                    component={CustomerCreate}
                 />
-                <MainStack.Screen 
-                    name='Regions'
-                    component={RegionStackScreen} 
+                <MainStack.Screen
+                    name='CustomerEdit'
+                    options={{
+                        title: 'Edit customer'
+                    }}
+                    component={CustomerEdit}
+                />
+                <MainStack.Screen
+                    name='CustomerView'
+                    options={{
+                        title: 'Customer'
+                    }}
+                    component={CustomerView}
+                />
+
+                <MainStack.Screen
+                    name='RegionsList'
+                    options={{
+                        title: 'Regions'
+                    }}
+                    component={RegionList}
+                />
+                <MainStack.Screen    
+                    name='CustomersList'
+                    options={{
+                        title: 'Customers'
+                    }}
+                    component={RegionCustomers}
                 />
             </MainStack.Navigator>
 

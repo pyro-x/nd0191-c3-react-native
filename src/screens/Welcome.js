@@ -1,14 +1,10 @@
 import Welcome from "../features/Welcome";
-import { SafeAreaView, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native";
 
 
 const WelcomeScreen = () => {
     return (
-        <SafeAreaView>
-            <ScrollView>
-                <Welcome/>
-            </ScrollView>
-        </SafeAreaView>
+            <Welcome/>
     );
 };
 

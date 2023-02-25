@@ -1,19 +1,31 @@
-import { View, Text, Button, TouchableOpacity } from 'react-native';
+import { View, Text} from 'react-native';
 import styleFn from './styles';
 import { useNavigation , useLinkTo} from '@react-navigation/native';
+import Button from '../../component/Button';
 
+import { clear } from '../../utilities/async_storage';
 const Welcome = () => {
 
     const styles = styleFn();
-    const { navigate } = useNavigation();
+    const navigation = useNavigation()
     const linkTo = useLinkTo();
     
     return (
         <View style={styles.container}>
-            <Text>Welcome to the app!</Text>
+            <Text style={styles.welcome}>Efficiently manage your customers across regions with our customer relationship app!</Text>
+            <Button title="Create customer" onPress={() => {
+                navigation.navigate ('CustomerCreate');
+            }}/>
             <Button title="Show regions" onPress={() => {
+                navigation.navigate ('RegionsList');
                 // TODO: navigate to regions list
-                linkTo('/Regions/List');
+                //linkTo('/Regions/List');
+            }}/>
+            <Button title="Clear cache" onPress={() => {
+
+                console.log ('Clear cache');
+                clear();
+
             }}/>
         </View>
 

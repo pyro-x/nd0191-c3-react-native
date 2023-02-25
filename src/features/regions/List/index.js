@@ -1,25 +1,35 @@
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import { useListRegions } from '../hooks'
+import RegionRow from '../../../component/RegionRow';
+import Button from '../../../component/Button';
+import { useNavigation , useLinkTo} from '@react-navigation/native';
+
+import styles from './styles';
+
 
 const RegionList = () => {
 
     const { regions, loading, error } = useListRegions();
-    console.log ('regions', regions);
+    const linkTo = useLinkTo();
 
-    if (loading) {
-        return <Text>Loading...</Text>;
-    }
-    
-    if (error) {
-        return <Text>Error: {error.message}</Text>;
-    }
-    
+    console.log ('regions', regions);
+    const navigation = useNavigation()
+
+
     return (
-        <View>
-            <Text>Regions:</Text>
-            {regions.map(({id, name}) => (
-            <Text key={id}>{name}</Text>
-            ))}
+        <View style={styles.container}>
+            <Button title="Create customer" onPress={() => {
+                navigation.navigate ('CustomerCreate');
+            }}/>
+
+            <Text styles={styles.header}>Regions</Text>
+            { loading && <Text>Loading...</Text> }
+            {
+                regions.map((region) => <View key={region.id}  style={styles.item}><RegionRow region={region}/></View>)
+
+            }
+            { error && <Text>Error: {error.message}</Text> }
+
         </View>
     );
 };

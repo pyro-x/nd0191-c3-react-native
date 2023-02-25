@@ -5,12 +5,13 @@ const styleFn = () => {
             flex: 1,
             alignItems: 'center',
             backgroundColor: '#F5FCFF',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
         },
         welcome: {
             fontSize: 20,
             textAlign: 'center',
             margin: 10,
+            paddingHorizontal: 20,
         },
         instructions: {
             textAlign: 'center',
@@ -18,6 +19,7 @@ const styleFn = () => {
             marginBottom: 5,
         },
     });
+
 };
 
 export default styleFn;

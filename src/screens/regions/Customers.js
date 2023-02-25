@@ -4,12 +4,9 @@ import CustomersByRegionList from "../../features/regions/Customers";
 
 const List = () => {
     return (
-        <SafeAreaView>
-            <ScrollView>
-                <CustomersByRegionList/>
-            </ScrollView>
-        </SafeAreaView>
-
+        <ScrollView contentContainerStyle={{flexGrow: 1, justifyContent: 'center'}}>
+            <CustomersByRegionList/>
+        </ScrollView>
     );
 }
 

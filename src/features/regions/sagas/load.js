@@ -11,7 +11,6 @@ export function* takeLoadRegions() {
         let regions = yield get('REGIONS_LIST') ; 
 
         yield put(actions.loadRegionsStart());
-        yield delay(1500)
 
         // if regions is empty, then load a default list
         if (!regions) {
