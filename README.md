@@ -24,7 +24,7 @@ This project is a mobile application for managing customer relationships in mult
 1. Clone the repository:
 ```
 git clone https://github.com/pyro-x/nd0191-c3-react-native.git
-cd nd0191-c3-react-native.git
+cd nd0191-c3-react-native
 ```
 
 2. Install dependencies:
