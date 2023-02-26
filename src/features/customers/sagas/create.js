@@ -13,9 +13,6 @@ export function* takeCreateCustomer() {
         const fields = yield select(state => state.customers.form.fields);
         const customers = yield select (state => state.customers.list.customers);
 
-        console.log ('fields:', fields);
-        console.log ('customers:', customers);
-
         const customer = {
             ...fields,
             id: customers.length + 1

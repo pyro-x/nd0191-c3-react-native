@@ -36,7 +36,6 @@ const CustomerForm = ({onSubmit, customerId}) => {
 
     const items = useMemo(() => regions.map((region) => ({label: region.name, value: region.id})), [regions]);
     
-    console.log(setFormField)
 
     const navigation = useNavigation();
 

@@ -34,24 +34,20 @@ const reducers = {
         state.create.status = status.PENDING;
     },
     createCustomerResult: (state, action) => {
-        console.log ('cerated customer successfully');
         state.create.status = status.SUCCESS;
         state.list.customers = action.payload;
     },
     createCustomerError: (state, action) => {
-        console.log ('error creating customer');
         state.create.status = status.ERROR;
     },
     editCustomer: (state) => {
         state.edit.status = status.PENDING;
     },
     editCustomerResult: (state, action) => {
-        console.log ('edited customer successfully');
         state.edit.status = status.SUCCESS;
         state.list.customers = action.payload;
     },
     editCustomerError: (state, action) => {
-        console.log ('error editing customer');
         state.edit.status = status.ERROR;
     },
     loadCustomers: (state) => {

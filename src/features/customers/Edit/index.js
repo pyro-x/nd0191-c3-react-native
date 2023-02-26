@@ -10,10 +10,8 @@ const CustomerEdit = () => {
     const styles = styleFn();
 
     const route = useRoute();
-    console.log ('route:', route);
 
     const { customerId } = route.params;
-    console.log (':customer id:', customerId)
 
     const { onSubmit } = useEditCustomer({id: customerId});
     
