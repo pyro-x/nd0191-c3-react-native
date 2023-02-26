@@ -27,6 +27,7 @@ const CustomerForm = ({onSubmit, customerId}) => {
       setFormField('region', customer.region);
       setValue(customer.region);
       setFormField('email', customer.email);
+      setFormField('phone', customer.phone);
       
     }},[customerId]);
 
@@ -58,7 +59,8 @@ const CustomerForm = ({onSubmit, customerId}) => {
       name,
       surname,
       region,
-        email,
+      email,
+      phone
     } = fields
     const styles = styleFn();
 
@@ -87,7 +89,17 @@ const CustomerForm = ({onSubmit, customerId}) => {
               onChangeText={v => setFormField('surname', v)}
           />
       </View>
-
+      <View style={styles.row}>
+          <Text style={styles.label}>Phone</Text>
+          <TextInput
+              label='Phone'
+              key={'phone'}
+              placeholder='phone'
+              value={phone || ''}
+              style={styles.textInput}
+              onChangeText={v => setFormField('phone', v)}
+          />
+      </View>
       <View style={styles.row}>
           <Text style={styles.label}>Email</Text>
           <TextInput 
@@ -101,6 +113,7 @@ const CustomerForm = ({onSubmit, customerId}) => {
       <View style={styles.row}>
           <Text style={styles.label}>Region</Text>
         <DropDownPicker
+            dropDownDirection='TOP'
             loading={loading}
             disabled={loading}
             open={open}
@@ -109,19 +122,19 @@ const CustomerForm = ({onSubmit, customerId}) => {
             setOpen={setOpen}
             setValue={setValue}
             setItems={regions.map((region) => ({label: region.name, value: region.id}))}
-            style={styles.picker}
+            style={styles.picker} 
             containerStyle={styles.pickerContainer}
           />
       </View>
+      <View style={styles.button}>
+        <Button onPress={() => {
+                      onSubmit();
+                      resetForm();
+                  }} title="Submit"/>
+      </View>
     </View>
-    <View style={styles.button}>
-    <Button onPress={() => {
-                    onSubmit();
-                    resetForm();
-                }} title="Submit"/>
-    </View>
-    </View>
-    
+  </View>
+        
   )
 }
 

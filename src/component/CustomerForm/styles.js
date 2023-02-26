@@ -55,7 +55,8 @@ const styleFn = () => {
         },
         button: {
             paddingTop: 30,
-            paddingBottom: 30
+            paddingBottom: 30,
+            alignItems: 'center',
         }
 
     });

@@ -5,17 +5,15 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#F5FCFF',
         alignItems: 'center',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         width: '100%',
         paddingTop: 10,
     },
     buttonsContainer: {
-        flexDirection: 'row',
         justifyContent: 'space-around',
     },
     button: {
         padding: 50,
-        alignSelf: 'end',
 
     },
     infoContainer: {

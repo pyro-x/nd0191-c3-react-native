@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import styles from './styles';
 
 const CustomerCard = ({ customer, onPress }) => {
-  const { name, surname, email, region, id } = customer;
+  const { name, surname, email, region, id , phone} = customer;
 
   const regionName = useSelector((state) => state.regions.list.regions.find((reg) => reg.id === region)?.name) || 'No region';
 
@@ -37,6 +37,14 @@ const CustomerCard = ({ customer, onPress }) => {
         </View>
         <View style={styles.hCardText}>
             <Text style={styles.value}>{surname}</Text>
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View style={styles.hCardLabel}>
+            <Text style={styles.label}>Phone</Text>
+        </View>
+        <View style={styles.hCardText}>
+            <Text style={styles.value}>{phone}</Text>
         </View>
       </View>
       <View style={styles.row}>

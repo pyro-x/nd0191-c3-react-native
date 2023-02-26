@@ -11,6 +11,7 @@ const initialState = {
         fields : {
             name: '',
             surname: '',
+            phone: '',
             region: null,
             email: '',
         }
