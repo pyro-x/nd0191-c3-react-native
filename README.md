@@ -37,7 +37,7 @@ or
 
 #### `npm start` or `yarn start`
 
-Runs the app in development mode. Open [http://localhost:19002](http://localhost:19002) in a web browser to view the development server. Use the **Expo Go** app on your iOS or Android device and scan the QR code to open the app on your device.
+Runs the app in development mode. Use the **Expo Go** app on your iOS or Android device and scan the QR code to open the app on your device.
 
 #### `npm run android` or `yarn android`
 
