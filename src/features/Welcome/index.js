@@ -23,7 +23,6 @@ const Welcome = () => {
             }}/>
             <Button title="Clear cache" onPress={() => {
 
-                console.log ('Clear cache');
                 clear();
 
             }}/>

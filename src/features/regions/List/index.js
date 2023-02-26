@@ -10,9 +10,6 @@ import styles from './styles';
 const RegionList = () => {
 
     const { regions, loading, error } = useListRegions();
-    const linkTo = useLinkTo();
-
-    console.log ('regions', regions);
     const navigation = useNavigation()
 
 

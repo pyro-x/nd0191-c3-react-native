@@ -26,7 +26,6 @@ const CustomersByRegionList = () => {
     const { name } = region || {};
 
     const onPress = (id) => {
-        console.log('onPress customer id',id);
         navigation.navigate ('CustomerView', { customerId: id });
     };
     return (
