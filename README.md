@@ -22,7 +22,7 @@ This project is a mobile application for managing customer relationships in mult
 ## Setup
 
 1. Clone the repository:
-``git clone https://github.com/pyro-x/nd0191-c3-react-native.git
+```git clone https://github.com/pyro-x/nd0191-c3-react-native.git
 cd nd0191-c3-react-native.git```
 
 2. Install dependencies:
@@ -30,13 +30,20 @@ cd nd0191-c3-react-native.git```
 or
 ``npm install``
 
-3. Run the application
-`yarn start``
-or 
-``npm start``
 
-4. Use a mobile device or emulator to view the application.
-Use the Expo go to scan the QR and launch the application on your mobile deviace
+### Options for Running the App
+
+#### `npm start` or `yarn start`
+
+Runs the app in development mode. Open [http://localhost:19002](http://localhost:19002) in a web browser to view the development server. Use the **Expo Go** app on your iOS or Android device and scan the QR code to open the app on your device.
+
+#### `npm run android` or `yarn android`
+
+Builds and runs the app on an Android device or emulator. If you don't have an emulator installed, you can install [Android Studio](https://developer.android.com/studio) and create a new Android Virtual Device (AVD) to run the app.
+
+#### `npm run ios` or `yarn ios`
+
+Builds and runs the app on an iOS device or simulator. If you're using a simulator, you must have [XCode](https://developer.apple.com/xcode/) installed on your machine.
 
 
 ## AsyncStorage
@@ -47,15 +54,9 @@ This application uses AsyncStorage to store customer data. Customer data is save
 
 This application uses native notifications to send reminder notifications to the user when it is time to call a customer. When the user sets a reminder for a customer, the application schedules a notification using the `Notifications` API. The notification is sent at the specified time, even if the application is closed.
 
-## Screenshots
-
-Include screenshots of the application here.
 
 ## Contributors
 
 - [David Monterroso Cabello](https://github.com/pyro-x)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
